@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
 int main() {
     int a,e;
     scanf("%d %d",&a,&e);
