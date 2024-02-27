@@ -1,2 +1,2 @@
 # Competitive_Programming
-The entirety of my Competitive Programming Journey 
+The entirety of my Competitive Programming journey 
