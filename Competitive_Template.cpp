@@ -44,9 +44,9 @@ vector<T> parseLine() {
         try {
             result.push_back(static_cast<T>(stod(token)));
         } catch (const invalid_argument& e) {
-            std::cerr << "Invalid argument: " << e.what() << '\n';
+            cerr << "Invalid argument: " << e.what() << '\n';
         } catch (const out_of_range& e) {
-            std::cerr << "Out of range: " << e.what() << '\n';
+            cerr << "Out of range: " << e.what() << '\n';
         }
     }
 
