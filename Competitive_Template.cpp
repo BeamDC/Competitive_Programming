@@ -33,16 +33,16 @@ template<typename T>
 vector<T> parseLine() {
     //read line of input
     string line;
-    std::getline(std::cin, line); 
+    getline(std::cin, line); 
 
     istringstream iss(line);
     vector<T> result;
     string token;
     
     //split along whitespace and convvert to specified type
-    while (std::getline(iss, token, ' ')) {
+    while (getline(iss, token, ' ')) {
         try {
-            result.push_back(static_cast<T>(std::stod(token)));
+            result.push_back(static_cast<T>(stod(token)));
         } catch (const invalid_argument& e) {
             std::cerr << "Invalid argument: " << e.what() << '\n';
         } catch (const out_of_range& e) {
