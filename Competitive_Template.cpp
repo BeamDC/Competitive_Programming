@@ -3,10 +3,10 @@
 using namespace std;
 //optimizations
 #pragma GCC optimize "Ofast"
+#pragma GCC target("avx2")
 #ifdef fread_unlocked
 #define fread fread_unlocked
 #endif
-#pragma GCC target("avx2")
 //macros
 #define all(x) x.begin(), x.end()
 #define IOS ios::sync_with_stdio(0);cin.tie(0);cout.tie(0)
