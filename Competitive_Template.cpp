@@ -22,23 +22,22 @@ int _i0=0;
 char _i[INPUT_SIZE];
 char _;
 //48 is the ascii value for zero ('0'), this converts chars to ints
-#define fin(x) do{for(x=_i[_i0++]-48;47<(_=_i[_i0++]);x=x*10+_-48);}while(0)
 #define fin_string(s) do{while(true){_=_i[_i0++];if(10<_){s.push_back(_);}else{break;}}}while(0)
 #define finset(p) freopen(p,"r",stdin);fread(_i,1,INPUT_SIZE,stdin)
 
 //this needs to still be tested, no idea if it works the way i want it to lol
 template<typename T>
-vector<T> parseLine() {
+vector<T> parseln(char delimiter) {
     //read line of input
     string line;
-    getline(std::cin, line); // change for fin_string
-
+    fin_string(line);
+    
     istringstream iss(line);
     vector<T> result;
     string token;
     
     //split along whitespace and convvert to specified type
-    while (getline(iss, token, ' ')) {
+    while (getline(iss, token, delimiter)) {
         try {
             result.push_back(static_cast<T>(stod(token)));
         } catch (const invalid_argument& e) {
@@ -47,12 +46,27 @@ vector<T> parseLine() {
             cerr << "Out of range: " << e.what() << '\n';
         }
     }
+    return result;
+}
 
+// Overload for string inputs
+template<>
+vector<string> parseln<string>(char delimiter) {
+    string line;
+    fin_string(line);
+    
+    istringstream iss(line);
+    vector<string> result;
+    string token;
+    
+    while (getline(iss, token, delimiter)) {
+        result.push_back(token);
+    }
     return result;
 }
 /*****************************************************************************/
 int main() {
-    IOS;
+    finset("Input.txt");
     return 0;
 }
 /*****************************************************************************/
