@@ -23,8 +23,6 @@ char _i[INPUT_SIZE];
 char _;
 //48 is the ascii value for zero ('0'), this converts chars to ints
 #define fin(x) do{for(x=_i[_i0++]-48;47<(_=_i[_i0++]);x=x*10+_-48);}while(0)
-#define fin_char(c) c=_i[_i0++]
-#define fin_word(s) do{while(true){_=_i[_i0++];if(32<_){s.push_back(_);}else{break;}}}while(0)
 #define fin_string(s) do{while(true){_=_i[_i0++];if(10<_){s.push_back(_);}else{break;}}}while(0)
 #define finset(p) freopen(p,"r",stdin);fread(_i,1,INPUT_SIZE,stdin)
 
@@ -33,7 +31,7 @@ template<typename T>
 vector<T> parseLine() {
     //read line of input
     string line;
-    getline(std::cin, line); 
+    getline(std::cin, line); // change for fin_string
 
     istringstream iss(line);
     vector<T> result;
