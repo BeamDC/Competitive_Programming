@@ -27,6 +27,31 @@ char _;
 #define fin_word(s) do{while(true){_=_i[_i0++];if(32<_){s.push_back(_);}else{break;}}}while(0)
 #define fin_string(s) do{while(true){_=_i[_i0++];if(10<_){s.push_back(_);}else{break;}}}while(0)
 #define finset(p) freopen(p,"r",stdin);fread(_i,1,INPUT_SIZE,stdin)
+
+//this needs to still be tested, no idea if it works the way i want it to lol
+template<typename T>
+vector<T> parseLine() {
+    //read line of input
+    string line;
+    std::getline(std::cin, line); 
+
+    istringstream iss(line);
+    vector<T> result;
+    string token;
+    
+    //split along whitespace and convvert to specified type
+    while (std::getline(iss, token, ' ')) {
+        try {
+            result.push_back(static_cast<T>(std::stod(token)));
+        } catch (const invalid_argument& e) {
+            std::cerr << "Invalid argument: " << e.what() << '\n';
+        } catch (const out_of_range& e) {
+            std::cerr << "Out of range: " << e.what() << '\n';
+        }
+    }
+
+    return result;
+}
 /*****************************************************************************/
 int main() {
     IOS;
