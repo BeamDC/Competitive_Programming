@@ -21,7 +21,6 @@ using namespace std;
 int _i0=0;
 char _i[INPUT_SIZE];
 char _;
-//48 is the ascii value for zero ('0'), this converts chars to ints
 #define fin_string(s) do{while(true){_=_i[_i0++];if(10<_){s.push_back(_);}else{break;}}}while(0)
 #define finset(p) freopen(p,"r",stdin);fread(_i,1,INPUT_SIZE,stdin)
 
@@ -67,6 +66,8 @@ vector<string> parseln<string>(char delimiter) {
 /*****************************************************************************/
 int main() {
     finset("Input.txt");
+    //input format (for ints, space delimiter):
+    //vector<int> = parseln<int>(' ');
     return 0;
 }
 /*****************************************************************************/
