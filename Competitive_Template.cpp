@@ -19,7 +19,6 @@ char _;
 #define finset(p) freopen(p,"r",stdin);fread(_c,1,INPUT_SIZE,stdin)
 #define finset_nf fread(_c,1,INPUT_SIZE,stdin)
 
-//this needs to still be tested, no idea if it works the way i want it to lol
 template<typename T>
 vector<T> parseln(char delimiter) {
     //read line of input
@@ -30,7 +29,6 @@ vector<T> parseln(char delimiter) {
     vector<T> result;
     string token;
     
-    //split along whitespace and convvert to specified type
     while (getline(iss, token, delimiter)) {
         try {
             result.push_back(static_cast<T>(stod(token)));
@@ -43,7 +41,6 @@ vector<T> parseln(char delimiter) {
     return result;
 }
 
-// Overload for string inputs
 template<>
 vector<string> parseln<string>(char delimiter) {
     string line;
