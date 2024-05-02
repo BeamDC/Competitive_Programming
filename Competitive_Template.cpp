@@ -17,12 +17,12 @@ using namespace std;
 //the result is the max amount of memory needed to solve
 //approximate using bit shift to get 
 //the optimal amount of memory to allocate to the buffer
-#define INPUT_SIZE (32<<20)
+#define INPUT_SIZE 32<<20
 int _i0=0;
 char _i[INPUT_SIZE];
 char _;
 #define fin_string(s) do{while(true){_=_i[_i0++];if(10<_){s.push_back(_);}else{break;}}}while(0)
-#define finset(p) freopen(p,"r",stdin);fread(_i,1,INPUT_SIZE,stdin)
+#define finset(p) if(p!="")freopen(p,"r",stdin);fread(_i,1,INPUT_SIZE,stdin)
 
 //this needs to still be tested, no idea if it works the way i want it to lol
 template<typename T>
