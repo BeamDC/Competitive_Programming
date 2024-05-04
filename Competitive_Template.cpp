@@ -10,55 +10,23 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define IOS ios::sync_with_stdio(0);cin.tie(0);cout.tie(0)
 #define umap unordered_map
+#define uset unordered_set
+#define printarr(a) cout << #a << ":\n";for(auto x : a)cout << x << ' '
 //fast I/O
 #define INPUT_SIZE 32<<20
-int _c0=0;
+int _c0 = 0;
 char _c[INPUT_SIZE];
 char _;
-#define fin_string(s) do{while(true){_=_c[_c0++];if(10<_){s.push_back(_);}else{break;}}}while(0)
+#define fin_string(s,e) string t="";do{while(true){_=_c[_c0++];if(t==e)break;if(10<_){t.push_back(_);}else{break;}}s=t;}while(0)
+#define fin_word(s) do{while(true){_=_c[_c0++];if(32<_){s.push_back(_);}else{break;}}}while(0)
+#define fin_int(x) do{for(x=_c[_c0++]-48;47<(_=_c[_c0++]);x=x*10+_-48);}while(0)
 #define finset(p) freopen(p,"r",stdin);fread(_c,1,INPUT_SIZE,stdin)
 #define finset_nf fread(_c,1,INPUT_SIZE,stdin)
 
-template<typename T>
-vector<T> parseln(char delimiter) {
-    //read line of input
-    string line;
-    fin_string(line);
-    
-    istringstream iss(line);
-    vector<T> result;
-    string token;
-    
-    while (getline(iss, token, delimiter)) {
-        try {
-            result.push_back(static_cast<T>(stod(token)));
-        } catch (const invalid_argument& e) {
-            cerr << "Invalid argument: " << e.what() << '\n';
-        } catch (const out_of_range& e) {
-            cerr << "Out of range: " << e.what() << '\n';
-        }
-    }
-    return result;
-}
-
-template<>
-vector<string> parseln<string>(char delimiter) {
-    string line;
-    fin_string(line);
-    
-    istringstream iss(line);
-    vector<string> result;
-    string token;
-    
-    while (getline(iss, token, delimiter)) {
-        result.push_back(token);
-    }
-    return result;
-}
-/***************************************************************************** @robhoma was here/
+/********************************************************* @robhoma was here */
 int main() {
     IOS;
-    finset("Input.txt");
+    finset("input.txt");
     return 0;
 }
 /*****************************************************************************/
