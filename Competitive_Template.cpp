@@ -3,9 +3,7 @@
 using namespace std;
 //optimizations
 #pragma GCC optimize "Ofast, unroll-loops"
-#ifdef fread_unlocked
-#define fread fread_unlocked
-#endif
+
 #ifndef _WIN32
 #define getchar getchar_unlocked
 #define putchar putchar_unlocked
