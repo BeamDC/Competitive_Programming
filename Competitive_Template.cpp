@@ -17,7 +17,7 @@ using namespace std;
 #define IN_SZ 24
 char *_c = new char[IN_SZ];
 int _c0=0;
-int _,_n,_0,_00,_ts=0;
+int _,_n,_0,_00;
 
 //macros
 #define all(x) x.begin(), x.end()
