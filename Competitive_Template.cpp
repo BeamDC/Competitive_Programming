@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 //optimizations
-#pragma GCC optimize "Ofast, unroll-loops"
+#pragma GCC optimize "Ofast"
 #ifdef fread_unlocked
 #define fread fread_unlocked
 #endif
