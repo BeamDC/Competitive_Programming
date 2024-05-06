@@ -26,11 +26,6 @@ int main() {
     cin.tie(nullptr)->sync_with_stdio(0);
     freopen("input.txt","r", stdin);
 
-    vector<int> v(1e4);
-    for (int i = 0; i < 1e4; ++i) {
-        _i(v[i]);
-    }
-
     auto end = chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = (end - start)*1000000;
     cout << "\ncompleted in: " << elapsed.count() << " microseconds\n";
