@@ -49,7 +49,7 @@ int main() {
     auto start = chrono::high_resolution_clock::now();
 
     cin.tie(nullptr)->sync_with_stdio(0);
-    freopen("F:\\Programming\\Ethan\\CPlusPlus\\Competitive Programming\\input.txt","r", stdin);
+    freopen("input.txt","r", stdin);
 
     vector<int> v(1e4);
     for (int i = 0; i < 1e4; ++i) {
