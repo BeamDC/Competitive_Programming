@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#pragma GCC optimize "Ofast, unroll-loops"
+#pragma GCC optimize "Ofast"
 #ifndef _WIN32
 #define getchar getchar_unlocked
 #define putchar putchar_unlocked
@@ -26,23 +26,32 @@ int _,_n;
 template<class T> void remDup(vector<T>& v) {
     sort(all(v)); v.erase(unique(all(v)),end(v));};
 
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+//this is left over from a past problem, dont want to retype.
+umap<string,char> m = {
+    {"00100000",' '},{"01000001",'A'},
+    {"01000010",'B'},{"01000011",'C'},
+    {"01000100",'D'},{"01000101",'E'},
+    {"01000110",'F'},{"01000111",'G'},
+    {"01001000",'H'},{"01001001",'I'},
+    {"01001010",'J'},{"01001011",'K'},
+    {"01001100",'L'},{"01001101",'M'},
+    {"01001110",'N'},{"01001111",'O'},
+    {"01010000",'P'},{"01010001",'Q'},
+    {"01010010",'R'},{"01010011",'S'},
+    {"01010100",'T'},{"01010101",'U'},
+    {"01010110",'V'},{"01010111",'W'},
+    {"01011000",'X'},{"01011001",'Y'},
+    {"01011010",'Z'}
+    };
 
 /********************************************************* @robhoma was here */
 int main() {
-    auto start = chrono::high_resolution_clock::now();
-
     cin.tie(nullptr)->sync_with_stdio(0);
-    freopen("input.txt","r", stdin);
-
-    vector<int> v(1e4);
-    for (int i = 0; i < 1e4; ++i) {
-        _i(v[i]);
-    }
-
-    auto end = chrono::high_resolution_clock::now();
-    std::chrono::duration<double> elapsed = (end - start)*1000000;
-    printarr(v);
-    cout << "\ncompleted in: " << elapsed.count() << " microseconds\n";
+    freopen("Input.txt","r", stdin);
     return 0;
 }
 /*****************************************************************************/
