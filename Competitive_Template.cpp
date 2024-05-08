@@ -13,6 +13,7 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define umap unordered_map
 #define uset unordered_set
+#define popc(x) __builtin_popcount(x)
 #define lb lower_bound  // First element NOT LESS than val
 #define ub upper_bound  // First element GREATER than val
 #define PI acos(-1)
@@ -31,7 +32,7 @@ template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, 
 template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
 
 //this is left over from a past problem, dont want to retype.
-umap<string,char> m = {
+umap<string,char> btoc = {
     {"00100000",' '},{"01000001",'A'},
     {"01000010",'B'},{"01000011",'C'},
     {"01000100",'D'},{"01000101",'E'},
