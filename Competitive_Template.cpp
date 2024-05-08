@@ -13,6 +13,9 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define umap unordered_map
 #define uset unordered_set
+#define vi vector<int>
+#define pii pair <int,int>
+#define mp(x,y) make_pair(x,y)
 #define popc(x) __builtin_popcount(x)
 #define lb lower_bound  // First element NOT LESS than val
 #define ub upper_bound  // First element GREATER than val
