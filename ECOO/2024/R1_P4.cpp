@@ -33,7 +33,6 @@ void solve(){
 int main() {
     cin.tie(nullptr)->sync_with_stdio(0);
     freopen("Input.txt","r", stdin);
-
     for(int i=0;i<10;++i){
         solve();
     }
