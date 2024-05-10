@@ -14,7 +14,9 @@ using namespace std;
 
 /********************************************************* @robhoma was here */
 string ab = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-vi primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+vi primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 
+             43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+
 void solve(){
     string s;
     cin >> s;
@@ -22,7 +24,7 @@ void solve(){
         int a = ab.find(s[i]);
         // cout << a << ' ';
         int shift = primes[i];
-        a-=shift;
+        a-=shift; //change to += to encode a string instead, this is how the test data was created
         a%=26;
         if(a<0)a=26+a;
         s[i]=ab[a];
