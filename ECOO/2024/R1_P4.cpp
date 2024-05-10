@@ -27,7 +27,7 @@ void solve(){
         if(a<0)a=26+a;
         s[i]=ab[a];
         // cout << a << ' ';
-    }cout << '\n' << s << '\n';
+    }cout << s << '\n';
 }
 
 int main() {
