@@ -1,6 +1,6 @@
 use std::io;
 
-macro_rules! parseln { //known amount of values, different types eg.(f64,String,i8)
+macro_rules! parset { //known amount of values, different types eg.(f64,String,i8)
     ($($t: ty),+) => ({
         let mut a_str = String::new();
         io::stdin().read_line(&mut a_str).expect("read error");
@@ -13,7 +13,7 @@ macro_rules! parseln { //known amount of values, different types eg.(f64,String,
     })
 }
 
-macro_rules! parseun { //unkown amout of values, one type eg.(u32,u32,u32)
+macro_rules! parsev { //unkown amout of values, one type eg.(u32,u32,u32)
     ($t:ty) => {{
         let mut a_str = String::new();
         io::stdin().read_line(&mut a_str).expect("read error");
