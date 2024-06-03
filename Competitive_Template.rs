@@ -1,7 +1,9 @@
 #[macro_use] extern crate dmoj; // fast I/O for dmoj submissions
 use std::io;
 
-macro_rules! parset { //known amount of values, different types eg.(f64,String,i8)
+// known amount of values, different types eg.(f64,String,i8)
+// for unknown amount of values, scan!(vec<T>)
+macro_rules! scan { 
     ($($t: ty),+) => ({
         let mut a_str = String::new();
         io::stdin().read_line(&mut a_str).expect("read error");
@@ -12,15 +14,6 @@ macro_rules! parset { //known amount of values, different types eg.(f64,String,i
             )+
         )
     })
-}
-
-macro_rules! parsev { //unkown amout of values, one type eg.(u32,u32,u32)
-    ($t:ty) => {{
-        let mut a_str = String::new();
-        io::stdin().read_line(&mut a_str).expect("read error");
-        let a_iter = a_str.split_whitespace();
-        a_iter.map(|s| s.parse::<$t>().expect("parse error")).collect::<Vec<_>>()
-    }};
 }
 
 //find gcd of two nums
