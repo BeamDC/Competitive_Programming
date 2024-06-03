@@ -1,3 +1,4 @@
+#[macro_use] extern crate dmoj; // fast I/O for dmoj submissions
 use std::io;
 
 macro_rules! parset { //known amount of values, different types eg.(f64,String,i8)
