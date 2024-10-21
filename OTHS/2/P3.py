@@ -1,4 +1,3 @@
-# click second until the next clikc is too big, then go with first
 n = input()
 m = 9
 clicks = 0
